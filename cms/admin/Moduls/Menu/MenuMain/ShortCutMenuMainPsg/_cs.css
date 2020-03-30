@@ -1,0 +1,36 @@
+﻿#MenuAdmShortCutPsg{border:solid 1px #d4d4d4;background:#f9f9f9;min-height:700px;_height:700px}
+#MenuAdmShortCutPsg .TxtInsertUpdate{background:#d4d4d4;height:28px; font: bold 12px Arial;color: #333;line-height: 28px;padding-left: 20px;display: block}
+#MenuAdmShortCutPsg .pdControl{padding:0 20px}
+#MenuAdmShortCutPsg .text{float:left;width:130px}
+#MenuAdmShortCutPsg .control{float:left;width:585px;position:relative;z-index:1;padding-top:3px}
+#MenuAdmShortCutPsg .TextSeoLink{font:bold 12px Tahoma;color: #444;padding-bottom: 15px}
+#MenuAdmShortCutPsg .pdButton{padding-left:150px}
+
+#MenuAdmShortCutPsg .controlImg{ float: left;width: 580px}
+#MenuAdmShortCutPsg .khungThuocTinh{border:solid 1px #d4d4d4;padding: 10px 20px}
+
+#MenuAdmShortCutPsg a.ThietLapAnh{color:Blue;position:absolute;top:10px;right:10px;z-index:2}
+#MenuAdmShortCutPsg a.ThietLapAnh:hover{color:Green}
+#MenuAdmShortCutPsg .adm_img_product{max-width:250px;max-height:250px}
+#Toogle_ThietLapAnhDaiDien input[type=text]{width:30px;text-align:center}
+#MenuAdmShortCutPsg .KhungToiUu{ border: solid 1px #d3d3d3;background-color: #e3e3e3}
+#MenuAdmShortCutPsg .PdKhungToiUu{padding: 15px 0 15px 10px}
+
+#MenuAdmShortCutPsg input[type=text].active{background:#dbffe0;
+animation:inputactive 2s linear 1s infinite alternate;
+/* Safari and Chrome: */
+-webkit-animation:inputactive 2s linear 1s infinite alternate;}
+
+@keyframes inputactive
+{
+0%   {background:#fff}
+100%  {background:#dbffe0}
+}
+
+@-webkit-keyframes inputactive /* Safari and Chrome */
+{
+0%   {background:#fff}
+100%  {background:#dbffe0}
+}
+
+#MenuAdmShortCutPsg input[type=text]:focus{animation:none;-webkit-animation:none}

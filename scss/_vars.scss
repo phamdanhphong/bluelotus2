@@ -1,0 +1,132 @@
+/* ====================================================
+Font
+==================================================== */
+
+
+@font-face {
+	font-family: 'UTMTimesBold';
+	src: url('../fonts/UTMTimesBold.eot');
+	src: local('☺'), url('../fonts/UTMTimesBold.woff') format('woff'),
+	url('../fonts/UTMTimesBold.ttf') format('truetype'),
+	url('../fonts/UTMTimesBold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'sf-ui-display-semibold';
+	src: url('../fonts/sf-ui-display-semibold-58646eddcae92.eot');
+	src: local('☺'), url('../fonts/sf-ui-display-semibold-58646eddcae92.woff') format('woff'),
+	url('../fonts/sf-ui-display-semibold-58646eddcae92.ttf') format('truetype'),
+	url('../fonts/sf-ui-display-semibold-58646eddcae92.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'UTMFlamenco';
+	src: url('../fonts/UTM Flamenco.eot');
+	src: local('☺'), url('../fonts/UTM Flamenco.woff') format('woff'),
+	url('../fonts/UTM Flamenco.ttf') format('truetype'),
+	url('../fonts/UTM Flamenco.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Flamenco&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap&subset=vietnamese');
+$font-roboto:'Roboto', sans-serif;
+$font-SF-Display-Semibold:'sf-ui-display-semibold';
+$font-UTMTimesBold:'UTMTimesBold';
+$font-flamenco: 'UTMFlamenco';
+$color-blue:#1caa8f;
+$color-blue2:#3a5862;
+
+@mixin text($font, $lh) {
+	font-size: ($font) + px;
+	line-height: $lh + px;
+}
+@mixin font-size($sizeValue) {
+	font-size: ($sizeValue) + px;
+	font-size: ($sizeValue / 10) + rem;
+}
+@mixin shadow(){
+	box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.5);
+}
+
+@mixin v-align {
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	   -moz-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	     -o-transform: translateY(-50%);
+	        transform: translateY(-50%);
+}
+
+@mixin h-align {
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	   -moz-transform: translateX(-50%);
+	    -ms-transform: translateX(-50%);
+	     -o-transform: translateX(-50%);
+	        transform: translateX(-50%);
+}
+
+@mixin v-h-align {
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	   -moz-transform: translate(-50%, -50%);
+	    -ms-transform: translate(-50%, -50%);
+	     -o-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
+}
+
+/* ====================================================
+Media Quary
+==================================================== */
+@mixin mq($breakpoint: md) {
+	@media #{map-get($breakpoints, $breakpoint)} {
+		@content;
+	}
+}
+
+$breakpoint-sm: 640px !default;
+$breakpoint-md: 768px !default;
+$breakpoint-lg: 990px !default;
+
+$breakpoints: (
+		'sm-ip': 'screen and (max-width: 330px)',
+		'xs': 'screen and (max-width: 374px)',
+		'sm': 'screen and (max-width: 640px)',
+		'md': 'screen and (max-width: 768px)',
+		'lg': 'screen and (max-width: 990px)',
+		'ipd': 'screen and (max-width: 1024px)',
+		'xl': 'screen and (max-width: 1200px)',
+		'xl-11': 'screen and (max-width: 1100px)',
+		'xl-13': 'screen and (max-width: 1300px)',
+		'xl-14': 'screen and (max-width: 1400px)',
+		'lp': 'screen and (max-width: 1440px)',
+		'mac': 'screen and (max-width: 1770px)',
+		'sm-min': 'screen and (min-width: 641px)',
+		'md-min': 'screen and (min-width: 769px)',
+		'lg-min': 'screen and (min-width: 991px)',
+		'ipd-min': 'screen and (min-width: 1024px)',
+		'xl-min': 'screen and (min-width: 1201px)',
+) !default;
+
+
+//marginPC and SP
+@for $i from 1 through 100 {
+	@include mq(md-min){
+		.mbpc-#{$i} {
+			margin-bottom: $i + px !important;
+		}
+	}
+	@include mq(){
+		.mbsp-#{$i} {
+			margin-bottom: $i + px !important;
+		}
+	}
+}

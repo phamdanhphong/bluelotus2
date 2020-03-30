@@ -1,0 +1,222 @@
+.itemM{
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 66px;
+	&__img{
+		width: calc(670/1170*100%);
+		@include mq{
+			width: 100%;
+			order:1;
+			margin-bottom: 30px;
+		}
+		&:before{
+			padding-bottom: calc(385/670*100%);
+		}
+	}
+	&__content{
+		width: calc(500/1170*100%);
+		padding-right: 60px;
+		padding-top: 6px;
+		@include mq(xl){
+			padding-right: 20px;
+		}
+		@include mq{
+			padding-right: 0;
+			width: 100%;
+			order:2;
+			
+		}
+	}
+	&__ttl{
+		font-weight: bold;
+		color:$color-blue2;
+		text-transform: uppercase;
+		@include text(28,36);
+		max-height: 72px;
+		overflow: hidden;
+		margin-bottom: 30px;
+		@include mq(xl){
+			br{
+				display: none;
+			}
+		}
+		@include mq{
+			margin-bottom: 20px;
+			@include font-size(20);
+		}
+	}
+	&--style02{
+		.itemM__content{
+				width: calc(570/1170*100%);
+			padding-left: 38px;
+			padding-right: 90px;
+			position: relative;
+			display: flex;
+			flex-wrap: wrap;
+			align-content: center;
+			@include mq{
+				width: 100%;
+				padding: 0;
+				padding-left: 80px;
+			}
+			&:before{
+				content:"";
+				position: absolute;
+				width: 120px;
+				height: 100%;
+				left: -87px;
+				top: 0;
+				background: url(../img/wedding/img-flower.jpg) no-repeat;
+				@include mq{
+					width: 70px;
+					-webkit-background-size: 70px auto;
+					background-size: 70px auto;
+					background-position: left center;
+					left: 0;
+				}
+			}
+			@include mq(xl){
+				padding-right: 20px;
+			}
+		}
+		.itemM__img{
+			width: calc(600/1170*100%);
+			&:before{
+				padding-bottom: calc(380/600*100%);
+			}
+			@include mq{
+				width: 100%;
+			}
+		}
+		@include mq(xl-14){
+			margin-left: 70px;
+		}
+		@include mq{
+			margin-left: 0;
+		}
+	}
+}
+.sec-content	{
+	padding: 50px 0;
+}
+.list-service{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -15px -30px;
+	padding-bottom: 50px;
+	@include mq{
+		margin-left: -5px;
+		margin-right: -5px;
+	}
+	&__item{
+		width: 33.33%;
+		padding: 0 15px;
+		margin-bottom: 30px;
+		@include mq{
+			width: 50%;
+			padding: 0 5px;
+		}
+		.img{
+			margin-bottom: 25px;
+			&:before{
+				padding-bottom:calc(245/370*100%);
+			}
+		}
+	}
+	&__ttl{
+		font-weight: 500;
+		color:$color-blue2;
+		text-align: center;
+		@include text(17,22);
+		max-height: 22px;
+		text-transform: uppercase;
+		overflow: hidden;
+		margin-bottom: 5px;
+		a{
+			color:inherit;
+		}
+		@include mq{
+			@include font-size(15);
+			line-height: 22px;
+			max-height: 22px;
+		}
+	}
+	.txtBase{
+		padding: 0 10px;
+		max-height: 75px;
+		overflow: hidden;
+		@include mq{
+			padding: 0;
+			max-height: 66px;
+		}
+	}
+}
+.thongke{
+	display: flex;
+	align-items: center;
+	color:#999;
+	@include text(14,22);
+	margin-bottom: 12px;
+	&__time{
+		margin-right: 20px;
+	}
+	i{
+		color:$color-blue;
+		margin-right: 5px;
+	}
+}
+.list-program{
+	&__ttl{
+		font-weight: bold;
+		@include text(20,22);
+		max-height: 44px;
+		overflow: hidden;
+		margin-bottom: 20px;
+		a{
+			color:#333;
+			&:hover{
+				color:$color-blue;
+			}
+		}
+		@include mq{
+			@include font-size(16);
+			margin-bottom: 10px;
+		}
+	}
+	.txtBase{
+		max-height: 125px;
+		overflow: hidden;
+		text-align: justify;
+		margin-bottom: 25px;
+	}
+	&__item{
+		margin-bottom: 40px;
+		display: flex;
+		flex-wrap: wrap;
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+	&__img{
+		width: calc(770/1170*100%);
+		@include mq{
+			width: 100%;
+			margin-bottom: 30px;
+		}
+		&:before{
+			padding-bottom: calc(350/770*100%);
+		}
+	}
+	&__content{
+		width: calc(400/1170*100%);
+		padding-left: 40px;
+		padding-top: 24px;
+		@include mq(xl){
+			padding-left: 20px;
+		}
+		@include mq{
+			padding: 0;
+			width: 100%;
+		}
+	}
+}

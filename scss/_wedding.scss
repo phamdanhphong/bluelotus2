@@ -1,0 +1,291 @@
+//.list-album{
+//	display: flex;
+//	flex-wrap: wrap;
+//	margin: 0 -15px -30px;
+//	padding-bottom: 82px;
+//	@include mq{
+//		padding-bottom: 50px;
+//		margin-left: -2.5px;
+//		margin-right: -2.5px;
+//	}
+//	&__item{
+//		width: 33.33%;
+//		padding: 0 15px;
+//		margin-bottom: 30px;
+//		display: flex;
+//		flex-wrap: wrap;
+//		z-index: 2;
+//		&--last{
+//			width: 100%;
+//			display: flex;
+//			flex-wrap: wrap;
+//			z-index: 1;
+//			.list-album__itemS{
+//				width: calc(770/1170*100%);
+//				order:1!important;
+//				.img{
+//					&:before{
+//						padding-bottom: calc(288/770*100%);
+//					}
+//				}
+//			}
+//			.list-album__itemMd{
+//				width: calc(400/1170*100%);
+//				padding-left: 30px;
+//				.img{
+//					transform: translate(-59px,-80px);
+//					z-index: 0;
+//					&:before{
+//						padding-bottom: calc(290/396*100%);
+//					}
+//					@include mq{
+//						transform: translate(-35px,-8px);
+//					}
+//				}
+//			}
+//		}
+//		&:nth-child(2n+2){
+//		.list-album__itemS{
+//			order:2;
+//			margin-bottom: 0;
+//		}
+//			.list-album__itemMd{
+//				order:1;
+//				margin-bottom: 30px;
+//				@include mq{
+//					margin-bottom: 5px;
+//				}
+//			}
+//		}
+//		@include mq{
+//			padding: 0 2.5px;
+//			margin-bottom: 5px;
+//		}
+//	}
+//	&__itemS{
+//		margin-bottom: 30px;
+//		width: 100%;
+//		.img{
+//			&:before{
+//				padding-bottom: calc(270/370*100%);
+//			}
+//		}
+//		@include mq{
+//			margin-bottom: 5px;
+//		}
+//	}
+//	&__itemMd{
+//		width: 100%;
+//		.img{
+//			&:before{
+//				padding-bottom: calc(583/370*100%);
+//			}
+//		}
+//	}
+//}
+
+.list-album{
+	&:after{
+		content: '';
+		display: block;
+		clear: both;
+	}
+	margin: 0 -15px;
+	@include mq{
+		margin-left: -5px;
+		margin-right: -5px;
+		margin-bottom: -10px;
+	}
+	&__item{
+		float: left;
+		width: 33.33%;
+		padding: 0 15px;
+		margin-bottom: 30px;
+		@include mq{
+			padding: 0 5px;
+			margin-bottom: 10px;
+		}
+		&--w60{
+			width: 66.66%;
+		}
+	}
+}
+.price-album{
+	padding: 36px 45px 20px;
+	position: relative;
+	&:before{
+		content:"";
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 50%;
+		width: 100%;
+		background: url(../img/wedding/bg-02.jpg) repeat;
+		@include mq{
+			height: 80%;
+		}
+	}
+	@include mq{
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+.list-price{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -14px -20px;
+	padding-bottom: 90px;
+	&__item{
+		margin: 0 14px 20px;
+		width: calc(33.33% - 28px);
+		background: #ffffff;
+		padding: 48px 64px 28px;
+		position: relative;
+		z-index: 2;
+			box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.1);
+		&:nth-child(2n+2){
+			background: #ffffff url(../img/wedding/img-flower02.png) no-repeat bottom right;
+			@include mq{
+				-webkit-background-size: 30% auto;
+				background-size: 30% auto;
+			}
+		}
+		@include mq(xl){
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		@include mq(){
+			width: 100%;
+			margin-bottom: 20px;
+			padding: 20px 15px;
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+	}
+	&__ttl{
+		font-weight: 500;
+		color:$color-blue2;
+		@include text(18,22);
+		max-height: 22px;
+		overflow: hidden;
+		margin-bottom: 25px;
+		text-transform: uppercase;
+		text-align: center;
+		@include mq(lg){
+			margin-bottom: 10px;
+		}
+		@include mq{
+			@include font-size(16);
+		}
+	}
+	&__price{
+		text-align: center;
+		font-weight: 500;
+		font-style: italic;
+		color:#c7876b;
+		font-family: $font-UTMTimesBold;
+		@include text(30,35);
+		padding-bottom: 30px;
+		border-bottom: solid 1px ;
+		margin-bottom: 30px;
+		@include mq(lg){
+			@include font-size(25);
+		}
+		@include mq{
+			@include font-size(24);
+			padding-bottom: 5px;
+			margin-bottom: 15px;
+		}
+	}
+	ul{
+		li{
+			text-align: center;
+			@include text(16,30);
+			color:#999;
+			@include mq{
+				@include font-size(14);
+			}
+		}
+	}
+}
+.box-ins{
+	display: flex;
+	margin: 0 -11px;
+	flex-wrap: wrap;
+	margin-bottom: 100px;
+	@include mq{
+		margin-bottom: 0;
+	}
+	&__item{
+		width: calc(100%/6);
+		padding: 0 11px;
+		&--style02{
+			padding-top: 40px;
+			@include mq{
+				padding-top: 25px;
+			}
+		}
+		position: relative;
+		.img{
+			&:before{
+				padding-bottom: calc(180/180*100%);
+			}
+		}
+		&__ttl{
+			position: absolute;
+			bottom:-16px;
+			left: 0;
+			width: 100%;
+			text-align: center;
+			padding: 0 20px;
+			img{
+				max-width: 100%;
+			}
+			@include mq{
+				bottom:5px;
+			}
+		}
+		&:nth-child(2){
+			&:before{
+				content:"";
+				width: 114px;
+				height: 85px;
+				position: absolute;
+				top: -67px;
+				left: -79px;
+				background: url(../img/wedding/img-flower03.png) no-repeat;
+				@include mq{
+					width: 57px;
+					height: 44px;
+					background-size: 57px auto;
+					top: -35px;
+					left: -36px;
+				}
+			}
+		}
+		&:nth-child(3){
+			padding-top: 50px;
+			@include mq{
+				padding-top: 20px;
+			}
+		}
+		&:nth-child(4){
+			.box-ins__item__ttl{
+				bottom:auto;
+				top: -9px;
+				@include mq{
+					top: 5px;
+				}
+			}
+		}
+		&:last-child{
+			@include mq{
+				padding-top: 20px;
+			}
+		}
+		@include mq{
+			width: 33.33%;
+		}
+	}
+}
