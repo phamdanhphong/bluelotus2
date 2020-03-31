@@ -84,29 +84,40 @@
 //	}
 //}
 
-.list-album{
-	&:after{
+.list-album {
+	&:after {
 		content: '';
 		display: block;
 		clear: both;
 	}
+
 	margin: 0 -15px;
-	@include mq{
+
+	@include mq {
 		margin-left: -5px;
 		margin-right: -5px;
-		margin-bottom: -10px;
+		margin-bottom: 20px;
 	}
-	&__item{
+
+	&__item {
 		float: left;
 		width: 33.33%;
 		padding: 0 15px;
 		margin-bottom: 30px;
-		@include mq{
+		z-index: 2;
+
+		@include mq {
 			padding: 0 5px;
 			margin-bottom: 10px;
 		}
-		&--w60{
+
+		&--w60 {
 			width: 66.66%;
+		}
+
+		&:nth-child(8) {
+			transform: translate(-18%, -27%);
+			z-index:1;
 		}
 	}
 }
@@ -209,53 +220,64 @@
 		}
 	}
 }
-.box-ins{
+.box-ins {
 	display: flex;
 	margin: 0 -11px;
 	flex-wrap: wrap;
 	margin-bottom: 100px;
-	@include mq{
+
+	@include mq {
 		margin-bottom: 0;
 	}
-	&__item{
+
+	&__item {
 		width: calc(100%/6);
 		padding: 0 11px;
-		&--style02{
+
+		&:nth-child(2n+1) {
 			padding-top: 40px;
-			@include mq{
+
+			@include mq {
 				padding-top: 25px;
 			}
 		}
+
 		position: relative;
-		.img{
-			&:before{
+
+		.img {
+			&:before {
 				padding-bottom: calc(180/180*100%);
 			}
 		}
-		&__ttl{
+
+		&__ttl {
 			position: absolute;
-			bottom:-16px;
+			bottom: -16px;
 			left: 0;
 			width: 100%;
 			text-align: center;
 			padding: 0 20px;
-			img{
+
+			img {
 				max-width: 100%;
 			}
-			@include mq{
-				bottom:5px;
+
+			@include mq {
+				bottom: 5px;
 			}
 		}
-		&:nth-child(2){
-			&:before{
-				content:"";
+
+		&:nth-child(2) {
+			&:before {
+				content: "";
 				width: 114px;
 				height: 85px;
 				position: absolute;
 				top: -67px;
 				left: -79px;
 				background: url(../img/wedding/img-flower03.png) no-repeat;
-				@include mq{
+
+				@include mq {
 					width: 57px;
 					height: 44px;
 					background-size: 57px auto;
@@ -263,28 +285,60 @@
 					left: -36px;
 				}
 			}
-		}
-		&:nth-child(3){
-			padding-top: 50px;
-			@include mq{
-				padding-top: 20px;
-			}
-		}
-		&:nth-child(4){
-			.box-ins__item__ttl{
-				bottom:auto;
-				top: -9px;
-				@include mq{
-					top: 5px;
+
+			&:after {
+				content: "";
+				width: 100%;
+				height: 30px;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				background: url(../img/wedding/ttl-01.png) no-repeat center center;
+				background-size: contain;
+
+				@include mq {
+					bottom:-10px;
 				}
 			}
 		}
-		&:last-child{
-			@include mq{
+
+		&:nth-child(3) {
+			padding-top: 50px;
+
+			@include mq {
 				padding-top: 20px;
 			}
 		}
-		@include mq{
+
+		&:nth-child(4) {
+			&:after {
+				content: "";
+				width: 100%;
+				height: 30px;
+				position: absolute;
+				top: -43px;
+				left: 0;
+				background: url(../img/wedding/ttl-02.jpg) no-repeat center center;
+				background-size: contain;
+				@include mq {
+					top:-55px;
+				}
+			}
+			@include mq{
+				padding-top:50px;
+				&:after{
+					top:11px;
+				}
+			}
+		}
+
+		&:last-child {
+			@include mq {
+				padding-top: 20px;
+			}
+		}
+
+		@include mq {
 			width: 33.33%;
 		}
 	}

@@ -45,6 +45,7 @@
     <script src="/js/slick/slick.min.js"></script>
     <script src="/js/jquery.fancybox.min.js"></script>
     <script src="/js/ofi.min.js"></script>
+    <script src="/js/masonry.pkgd.min.js"></script>
     <script src="/js/setting.js"></script>
     <script src="/js/cookie.js"></script>
     <script src="/js/loading.js"></script>

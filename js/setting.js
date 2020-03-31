@@ -94,7 +94,7 @@ $('.list-news').slick({
 });
 
 $( function() {
-    $( "#datepicker" ).datepicker();
+    $( ".select" ).datepicker();
 } );
 // $(function () {
 //     objectFitImages('img');
