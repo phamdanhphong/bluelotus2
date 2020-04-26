@@ -81,7 +81,7 @@
 </head>
 <body class="m0">
     <form id="form1" runat="server">
-    <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>    
+    <asp:ScriptManager  EnableCdn="true" ID="ScriptManager1" runat="server"></asp:ScriptManager>    
     <div class="BgPageAdmin" align="center">
         <div class="FormatWidth" align="left"><uc2:u_adm_header ID="u_adm_header1" runat="server" /></div>
         <div class="BArMenu"><div class="FormatWidth" align="left"><uc4:AdmControlsHorizaMenu ID="AdmControlsHorizaMenu1" runat="server" /></div></div>

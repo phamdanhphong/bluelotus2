@@ -116,7 +116,7 @@ public partial class cms_admin_Moduls_Advertising_Item_ControlItem : System.Web.
         {
             orderBy = CookieExtension.GetCookiesSort(sortCookiesName);
             if (orderBy.Length < 1)
-                orderBy = GroupsColumns.IgorderColumn + "," + ItemsColumns.DicreatedateColumn + " desc";
+                orderBy = GroupsColumns.IgorderColumn + " ," + ItemsColumns.DicreatedateColumn + " desc , iorder asc ";
         }
 
         DataSet ds = new DataSet();
@@ -301,5 +301,13 @@ public partial class cms_admin_Moduls_Advertising_Item_ControlItem : System.Web.
         string key = "&name=" + tbTitleSearch.Text;
         Response.Redirect(LinkAdmin.GoAdminCategory(CodeApplications.Advertising, TypePage.Item, ddlCateSearch.SelectedValue,
                                                     "&NumberShowItem=" + DdlListShowItem.SelectedValue, "1", key));
+    }
+
+    protected void lbOrder_OnClick(object sender, EventArgs e)
+    {
+        //Lưu vào cookies
+        string order = CookieExtension.SetCookiesSort(ItemsColumns.IiOrder, sortCookiesName);
+        //Gọi hàm lấy dữ liệu theo kiểu sắp xếp hiện tại
+        GetNews(order);
     }
 }

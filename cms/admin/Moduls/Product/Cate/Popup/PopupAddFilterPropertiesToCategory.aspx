@@ -11,7 +11,7 @@
     <form id="PopupAddFilterPropertiesToCategory" runat="server">
     <div class='KhungPopup'>
         <div class="tenDanhMuc">Thông tin thuộc tính lọc của danh mục: <span class="fwb"><asp:Literal ID="ltrCategoryName" runat="server"></asp:Literal></span></div> 
-        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        <asp:ScriptManager  EnableCdn="true" ID="ScriptManager1" runat="server">
         </asp:ScriptManager>
         <asp:UpdatePanel ID="UpdatePanel1" runat="server">
             <ContentTemplate>

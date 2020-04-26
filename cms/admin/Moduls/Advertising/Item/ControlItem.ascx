@@ -44,7 +44,14 @@
         <div class="split">|</div>                    
         <div class="cot5">
             <asp:LinkButton ID="lbtStatus" runat="server" onclick="lbtStatus_Click" CssClass="arrowSort" ToolTip="Click để sắp xếp danh sách theo trường này"><%=Developer.AdvertisingKeyword.TrangThai %></asp:LinkButton>
-        </div>                        
+        </div>    
+        <div class="split">|</div>                    
+        <div class="cot5">
+            <asp:LinkButton runat="server" id="lbOrder" ClientIDMode="Static"  CssClass="arrowSort" OnClick="lbOrder_OnClick">
+                <%=Developer.AdvertisingKeyword.ThuTu %>
+            </asp:LinkButton>
+           
+        </div> 
         <div class="split">|</div>                    
         <div class="fr pr5"><%=Developer.AdvertisingKeyword.CongCu %></div>                    
         <div class="cb"><!----></div>
@@ -70,6 +77,10 @@
                         <div class="split">|</div>
                         <div class="cot5" align="center">
                             <a id="nc<%#Eval("IID").ToString()%>" href="javascript:UpdateEnableItem(<%#Eval("IID").ToString()%>)" class="EnableIcon<%#Eval("IIENABLE").ToString()%>">&nbsp;</a>
+                        </div>
+                        <div class="split">|</div>
+                        <div class="cot5" align="center">
+                            <%#Eval("IORDER").ToString() %>
                         </div>
                         <div class="split">|</div>                            
                         <div class="fr tool pr5">
