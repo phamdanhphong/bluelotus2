@@ -97,7 +97,7 @@ public partial class cms_display_Customer_Controls_Index : System.Web.UI.UserCon
                 s += @"
 <section class='sec-drink'>
     <div class='inner'>
-        <h2 class='ttl-comp03 ttl-comp03--md fade-up'>" + dt.Rows[i][GroupsColumns.VgnameColumn] + @"</h2>
+        <h2 class='ttl-comp03 fade-up'>" + dt.Rows[i][GroupsColumns.VgnameColumn] + @"</h2>
         <div class='list-drink'>
             " + list + @"  
         </div>
@@ -228,7 +228,7 @@ public partial class cms_display_Customer_Controls_Index : System.Web.UI.UserCon
                     s += @"
 <section class='sec-picdrink fade-up'>
     <div class='inner'>
-        <h2 class='ttl-comp03 ttl-comp03--md fade-up'>" + dt.Rows[i][ItemsColumns.VititleColumn].ToString() + @"</h2>
+        <h2 class='ttl-comp03 fade-up'>" + dt.Rows[i][ItemsColumns.VititleColumn].ToString() + @"</h2>
     </div>
     <div class='list-picdrink'>
         " + GetOtherImages2(dt.Rows[i][ItemsColumns.IidColumn].ToString()) + @"

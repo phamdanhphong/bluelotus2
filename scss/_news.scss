@@ -120,8 +120,9 @@
 		width: calc(420/790*100%);
 		display: flex;
 		flex-wrap: wrap;
-		align-content: center;
-		padding-left: 28px;
+		align-content:flex-start;
+		padding-left: 24px;
+		padding-top:30px;
 		@include mq{
 			width: 100%;
 			padding-left: 0;
@@ -132,7 +133,7 @@
 		@include text(20,25);
 		height: 50px;
 		overflow: hidden;
-		margin-bottom: 15px;
+		margin-bottom: 11px;
 		width: 100%;
 		@include mq{
 			@include font-size(15);
@@ -145,8 +146,9 @@
 		}
 }
 	.txtBase{
-		max-height: 100px;
+		max-height: 88px;
 		overflow: hidden;
+		line-height:22px;
 		color:#666666;
 		@include mq{
 			min-height: 75px;
@@ -166,6 +168,7 @@
 		font-weight: bold;
 		@include mq{
 			@include font-size(13);
+			margin-top:-7px;
 		}
 		a{
 			color:inherit;
@@ -267,7 +270,7 @@
 		}
 	}
 	.img{
-		margin-bottom: 10px;
+		margin-bottom: 15px;
 		&:before{
 			padding-bottom:calc(246/370*100%) ;
 		}
@@ -277,7 +280,7 @@
 		@include text(16,22);
 		height: 22px;
 		overflow: hidden;
-		margin-bottom: 10px;
+		margin-bottom: 6px;
 		@include mq{
 			@include font-size(14);
 		}
@@ -286,12 +289,14 @@
 		}
 	}
 	.thongke{
+		margin-bottom:7px;
 		i{
 			color:#999999;
 		}
 	}
 	.txtBase{
-		max-height: 75px;
+		max-height: 66px;
+		line-height:22px;
 		overflow: hidden;
 	}
 }

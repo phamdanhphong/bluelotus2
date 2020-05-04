@@ -91,7 +91,7 @@
 		clear: both;
 	}
 
-	margin: 0 -15px;
+	margin: 0 -15px 74px;
 
 	@include mq {
 		margin-left: -5px;
@@ -145,7 +145,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	margin: 0 -14px -20px;
-	padding-bottom: 90px;
+	padding-bottom: 95px;
 	&__item{
 		margin: 0 14px 20px;
 		width: calc(33.33% - 28px);
@@ -224,7 +224,7 @@
 	display: flex;
 	margin: 0 -11px;
 	flex-wrap: wrap;
-	margin-bottom: 100px;
+	margin-bottom: 32px;
 
 	@include mq {
 		margin-bottom: 0;
@@ -291,19 +291,20 @@
 				width: 100%;
 				height: 30px;
 				position: absolute;
-				bottom: 0;
+				bottom: -15px;
 				left: 0;
 				background: url(../img/wedding/ttl-01.png) no-repeat center center;
 				background-size: contain;
 
 				@include mq {
-					bottom:-10px;
+					bottom: -10px;
 				}
 			}
 		}
 
 		&:nth-child(3) {
 			padding-top: 50px;
+			padding-right: 24px;
 
 			@include mq {
 				padding-top: 20px;
@@ -311,28 +312,44 @@
 		}
 
 		&:nth-child(4) {
+			margin-top: 38px;
+			margin-left: -9px;
+
 			&:after {
 				content: "";
 				width: 100%;
 				height: 30px;
 				position: absolute;
-				top: -43px;
+				top: -47px;
 				left: 0;
 				background: url(../img/wedding/ttl-02.jpg) no-repeat center center;
 				background-size: contain;
+
 				@include mq {
-					top:-55px;
+					top: -55px;
 				}
 			}
-			@include mq{
-				padding-top:50px;
-				&:after{
-					top:11px;
+
+			@include mq {
+				padding-top: 50px;
+
+				&:after {
+					top: 11px;
 				}
 			}
 		}
 
+		&:nth-child(5) {
+			margin-top: -38px;
+
+			@include mq {
+				margin-top: 12px;
+			}
+		}
+
 		&:last-child {
+			margin-top: 38px;
+
 			@include mq {
 				padding-top: 20px;
 			}
