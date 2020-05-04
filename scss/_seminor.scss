@@ -1,42 +1,51 @@
-.item-seminor{
+.item-seminor {
 	padding: 40px 0;
 	background: url(../img/seminor/bg-01.jpg) repeat;
 	margin-bottom: 20px;
-	&:last-child{
+
+	&:last-child {
 		margin-bottom: 0;
 	}
-	.inner{
+
+	.inner {
 		display: flex;
 		flex-wrap: wrap;
-		>*{
-			width: 50%;
-			@include mq{
-				width: 100%;
+
+		> * {
+			@include mq {
+				width: 100%!important;
 			}
 		}
 	}
-	&__img{
+
+	&__img {
+		width: 51%;
 		padding: 13px;
 		background: #ffffff;
 		border-radius: 3px;
-			box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.3);
-		.img{
+		box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.3);
+
+		.img {
 			border-radius: 3px;
-				&:before{
-					padding-bottom: calc(380/570*100%);
-				}
+
+			&:before {
+				padding-bottom: calc(380/570*100%);
+			}
 		}
 	}
-	&__content{
+
+	&__content {
+		width: 49%;
 		padding-left: 40px;
 		display: flex;
 		flex-wrap: wrap;
 		align-content: center;
 		justify-content: center;
 	}
-	&__ttl{
+
+	&__ttl {
 		text-align: center;
-		color:$color-blue;
+		color: $color-blue;
 		@include font-size(33);
 		line-height: 40px;
 		padding-top: 60px;
@@ -44,74 +53,87 @@
 		margin-bottom: 16px;
 		font-family: $font-SF-Display-Semibold;
 		text-transform: uppercase;
-		@include mq(xl){
+
+		@include mq(xl) {
 			@include font-size(28);
 			margin-bottom: 5px;
 		}
-		@include mq{
+
+		@include mq {
 			@include font-size(22);
 			line-height: 30px;
-			
 		}
-		span{
+
+		span {
 			max-height: 40px;
 			overflow: hidden;
-			@include mq{
+
+			@include mq {
 				max-height: 30px;
 			}
 		}
 	}
-	.txtBase{
-		padding-bottom: 27px;
+
+	.txtBase {
+		padding-bottom: 16px;
 		margin-bottom: 34px;
 		position: relative;
 		text-align: center;
-		span{
+
+		span {
 			max-height: 75px;
 			display: inline-block;
 			overflow: hidden;
 		}
-		&:before{
-			content:"";
+
+		&:before {
+			content: "";
 			height: 1px;
 			background: $color-blue;
-			bottom:0;
+			bottom: 0;
 			width: 280px;
 			left: 50%;
 			position: absolute;
 			transform: translateX(-50%);
 		}
-		@include mq(xl){
+
+		@include mq(xl) {
 			padding-bottom: 10px;
 			margin-bottom: 20px;
 		}
-		@include mq{
+
+		@include mq {
 			padding-bottom: 10px;
 			margin-bottom: 15px;
 		}
 	}
-	.btn{
+
+	.btn {
 		min-width: 127px;
 		min-height: 40px;
 	}
-	&:nth-child(2n){
-	.item-seminor__img{
-		order:2;
+
+	&:nth-child(2n) {
+		.item-seminor__img {
+			order: 2;
+		}
+
+		.item-seminor__content {
+			order: 1;
+			padding-right: 40px;
+			padding-left: 0;
+		}
 	}
-	.item-seminor__content{
-		order:1;
-		padding-right: 40px;
-		padding-left: 0;
-	}
-}
-	@include mq{
-		.item-seminor__img{
-			order:1!important;
+
+	@include mq {
+		.item-seminor__img {
+			order: 1 !important;
 			margin-bottom: 30px;
 		}
-		.item-seminor__content{
-			order:2!important;
-			padding: 0!important;
+
+		.item-seminor__content {
+			order: 2 !important;
+			padding: 0 !important;
 		}
 	}
 }
@@ -123,13 +145,14 @@
 		padding: 0 15px;
 		@include mq{
 			padding: 0 2.5px;
+			width:25%;
 		}
 		span{
 			display: inline-flex;
 			justify-content: center;
 			align-items: center;
-			padding: 0 15px;
-			min-width: 175px;
+			padding: 0 10x;
+			min-width: 168px;
 			min-height: 65px;
 			font-weight: 500;
 			@include font-size(23);
@@ -138,12 +161,13 @@
 			transition: .3s;
 			@include mq{
 				min-width: 60px;
-				@include font-size(14);
-				min-height: 40px;
+				@include font-size(10);
+				min-height: 35px;
 				padding: 0 5px;
+				width:100%;
+				text-align:center;
 			}
 			@include mq(sm-ip){
-				@include font-size(11);
 				min-height: 30px;
 			}
 		}
@@ -169,12 +193,15 @@
 	&.on{
 		display: block;
 	}
+	.noidung{
+		padding-bottom:0;
+	}
 }
 .list-picture{
 	display: flex;
 	flex-wrap: wrap;
 	margin: 0 -15px -30px;
-	padding-bottom: 72px;
+	padding-bottom: 24px;
 	@include mq{
 		padding-bottom: 0;
 		margin-left: -15px;
@@ -197,35 +224,41 @@
 		}
 	}
 }
-.time-retaurant{
+.time-retaurant {
 	background: #bc974a;
 	padding: 120px 0 60px;
 	margin-bottom: 70px;
-	.inner{
+
+	.inner {
 		display: flex;
 		flex-wrap: wrap;
 		padding: 0 90px;
-		@include mq(xl){
+
+		@include mq(xl) {
 			padding: 0 20px;
 		}
 	}
-	&__left{
+
+	&__left {
 		width: calc(500/1030*100%);
-		border:solid 7px #fff;
+		border: solid 7px #fff;
 		border-radius: 10px;
 		background: #333333;
-		padding: 40px 47px 50px;
+		padding: 35px 42px 44px;
 		position: relative;
-		@include mq(xl){
+
+		@include mq(xl) {
 			padding-left: 15px;
 			padding-right: 15px;
 		}
-		@include mq{
+
+		@include mq {
 			width: 100%;
 			margin-bottom: 30px;
 		}
-		&:before{
-			content:"";
+
+		&:before {
+			content: "";
 			position: absolute;
 			width: 156px;
 			height: 78px;
@@ -235,136 +268,174 @@
 			background: url(../img/seminor/bg-02.png) no-repeat;
 			z-index: 2;
 		}
-		.time-retaurant__ttl{
+
+		.time-retaurant__ttl {
 			text-align: center;
 		}
-		ul{
-			li{
+
+		ul {
+			li {
 				display: flex;
 				font-weight: 500;
-				color:#fff;
+				color: #fff;
 				@include text(20,28);
 				margin-bottom: 22px;
-				@include mq(lg){
+
+				@include mq(lg) {
 					@include font-size(16);
 				}
-				@include mq{
+
+				@include mq {
 					@include font-size(14);
 				}
-				&:last-child{
+
+				&:last-child {
 					margin-bottom: 0;
 				}
-				span{
+
+				span {
 					display: inline-block;
 					width: 50%;
-					&:last-child{
+
+					&:last-child {
 						text-align: right;
 					}
 				}
 			}
 		}
 	}
-	&__right{
+
+	&__right {
 		width: calc(530/1030*100%);
-		padding-left: 60px;
+		padding-left: 66px;
 		display: flex;
 		flex-wrap: wrap;
 		align-content: center;
-		@include mq{
+
+		@include mq {
 			width: 100%;
 			padding-left: 0;
 		}
-		ul{
-			@include mq{
+
+		ul {
+			@include mq {
 				width: 100%;
 			}
-			li{
-				color:#fff;
+
+			li {
+				color: #fff;
 				@include text(23,28);
 				margin-bottom: 10px;
-				@include mq{
+
+				@include mq {
 					@include font-size(16);
-					@include mq{
+
+					@include mq {
 						text-align: center;
 					}
 				}
-				a{
-					color:inherit;;
+
+				a {
+					color: inherit;
+					;
 				}
 			}
 		}
-	}
-	&__ttl{
+	}	
+
+	&__ttl {
 		font-family: $font-SF-Display-Semibold;
-		color:#fff;
+		color: #fff;
 		@include text(28,30);
 		width: 100%;
 		text-transform: uppercase;
-		margin-bottom: 32px;
-		@include mq{
+		margin-bottom: 37px;
+
+		@include mq {
 			text-align: center;
 			@include font-size(20);
 			margin-bottom: 20px;
 		}
 	}
 }
-.list-carpark{
+.list-carpark {
 	display: flex;
 	flex-wrap: wrap;
 	margin-bottom: -35px;
-	padding-bottom: 67px;
-	&__item{
+	padding-bottom: 82px;
+
+	&__item {
 		width: 50%;
-		margin-bottom: 35px;
-		&:nth-child(n+3){
+		margin-bottom: 47px;
+
+		&:nth-child(n+3) {
 			width: 25%;
-			.list-carpark__ttl{
-				width: 100%;
-				margin-bottom: 10px;
+			.img {
+				&:before {
+					padding-bottom: calc(390/454*100%);
+				}
 			}
-			.txtBase{
+
+			.list-carpark__ttl {
 				width: 100%;
-				max-height: 75px;
+				margin-bottom: 20px;
 			}
-			@include mq{
+
+			.txtBase {
+				width: 100%;
+				padding-left: 0;
+				max-height: 66px;
+			}
+
+			@include mq {
 				width: 50%;
 			}
 		}
 	}
-	.img{
-		&:before{
+
+	.img {
+		&:before {
 			padding-bottom: calc(390/583*100%);
 		}
 	}
-	&__content{
-		padding: 20px 20px;
-		border:solid 1px #ebebeb;
+
+	&__content {
+		padding: 19px 25px;
+		border: solid 1px #ebebeb;
 		display: flex;
 		align-items: center;
 		flex-wrap: wrap;
-		@include mq{
+
+		@include mq {
 			padding: 20px 10px;
 		}
 	}
-	&__ttl{
+
+	&__ttl {
 		width: 30%;
 		@include text(25,28);
 		max-height: 28px;
 		overflow: hidden;
-		@include mq{
+
+		@include mq {
 			width: 100%;
 			@include font-size(20);
 			margin-bottom: 10px;
 		}
-		a{
-			color:#333;
+
+		a {
+			color: #333;
 		}
 	}
-	.txtBase{
+
+	.txtBase {
 		width: 70%;
-		max-height: 125px;
+		max-height: 110px;
+		line-height: 22px;
 		overflow: hidden;
-		@include mq{
+		padding-left: 20px;
+
+		@include mq {
 			width: 100%;
 		}
 	}

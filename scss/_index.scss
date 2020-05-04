@@ -26,7 +26,7 @@
 	display: flex;
 	align-items: flex-start;
 	max-width: 1127px;
-	margin-bottom: 77px;
+	margin-bottom: 37px;
 	@media(max-width: 1300px){
 		padding-right:50px;
 	}
@@ -52,7 +52,7 @@
 	}
 	&__content{
 		position: relative;
-		padding: 66px 120px 80px 213px;
+		padding: 59px 120px 80px 213px;
 		margin-top: 45px;
 		width: calc(740/1127*100%);
 		border: solid 1px #e1e1e1;
@@ -197,21 +197,26 @@
 		}
 	}
 	.txtBase{
-		margin-bottom: 10px;
-		max-height: 75px;
+		margin-bottom: 13px;
+		max-height: 66px;
+		line-height:22px;
 		overflow: hidden;
 	}
 	.btn{
 		float: right;
+		margin-right:7px;
 	}
 }
 .sec-intro{
-	padding: 30px 0;
+	padding: 38px 0 0;
 	margin-bottom: 50px;
 	background: url(../img/index/bg-01.png) no-repeat top left;
+	@include mq{
+		background-size:80% auto;
+	}
 }
 .sec-drink{
-	padding: 50px 0;
+	padding: 50px 0 66px!important;
 	background:url(../img/index/bg-02.png) no-repeat top right, url(../img/index/bg-03.png) no-repeat;
 	-webkit-background-size: auto auto, cover;
 	background-size: auto auto, cover;
@@ -233,6 +238,9 @@
 		@include mq{
 			width: 100%;
 		}
+	}
+	&__content{
+		padding-left:0;
 	}
 	&__img{
 			img{
@@ -310,14 +318,17 @@
 		}
 	}
 }
-.sec-buffer{
-	padding: 100px 0 48px;
+.sec-buffer {
+	padding: 38px 0 48px;
 	background: url(../img/index/bg-01.png) no-repeat top left;
+	@include mq {
+		background-size: 80% auto;
+	}
 }
 .list-foods{
 	display: flex;
 	flex-wrap: wrap;
-	margin: 0 -15px -34px;
+	margin: 0 -15px -18px;
 	padding-bottom: 12px;
 	@include mq(lg){
 		margin-left: -5px;

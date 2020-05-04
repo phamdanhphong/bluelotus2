@@ -65,7 +65,7 @@ public partial class cms_display_PhotoAlbum_subControls_subPhotoHomepage : Syste
 
 
             s += @"
-  <h2 class='ttl-comp03 ttl-comp03--md fade-up'>" + dt.Rows[i][GroupsColumns.VgnameColumn] + @"</h2>
+  <h2 class='ttl-comp03 fade-up'>" + dt.Rows[i][GroupsColumns.VgnameColumn] + @"</h2>
     <div class='list-carpark'>
         " + list + @"
     </div>
