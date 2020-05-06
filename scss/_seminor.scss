@@ -224,10 +224,17 @@
 		}
 	}
 }
+.car-park{
+	margin-top:70px!important;
+}
 .time-retaurant {
 	background: #bc974a;
 	padding: 120px 0 60px;
 	margin-bottom: 70px;
+
+	& + section {
+		margin-top: -70px;
+	}
 
 	.inner {
 		display: flex;
@@ -341,7 +348,7 @@
 				}
 			}
 		}
-	}	
+	}
 
 	&__ttl {
 		font-family: $font-SF-Display-Semibold;
