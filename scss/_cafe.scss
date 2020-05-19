@@ -2,67 +2,85 @@
 	padding: 44px 0;
 	background: #eae7e0;
 }
-.list-drink{
+.list-drink {
 	display: flex;
 	flex-wrap: wrap;
 	margin: 0 -15px -30px;
-	@include mq{
-		margin: 0 -2.5px  -5px;
+
+	@include mq {
+		margin: 0 -2.5px -5px;
 	}
-	@include mq(sm){
+
+	@include mq(sm) {
 		margin-bottom: -30px;
 	}
-	&__item{
+
+	&__item {
 		width: 33.33%;
 		padding: 0 15px;
 		margin-bottom: 30px;
-		@include mq{
+
+		@include mq {
 			padding: 0 2.5px;
 			margin-bottom: 5px;
 		}
-		@include mq(sm){
+
+		@include mq(sm) {
 			width: 100%;
 			margin-bottom: 30px;
 		}
 	}
-	.img{
+
+	.img {
 		margin-bottom: 20px;
-		&:before{
-			padding-bottom:calc(246/370*100%);
+
+		.img__crop {
+			pointer-events: none;
+		}
+
+		&:before {
+			padding-bottom: calc(246/370*100%);
 		}
 	}
 
-	&__ttl{
+	&__ttl {
 		font-weight: bold;
 		@include text(20,26);
 		text-transform: uppercase;
 		display: flex;
 		align-items: center;
 		margin-bottom: 18px;
-		@include mq{
+
+		@include mq {
 			@include font-size(16);
 			padding-left: 7px;
 		}
-		a{
+
+		a {
 			height: 26px;
+			pointer-events: none;
 			overflow: hidden;
 		}
-		span{
+
+		span {
 			font-family: $font-flamenco;
-			color:#c6a17b;
+			color: #c6a17b;
 			@include font-size(33);
 			line-height: 24px;
 			margin-right: 10px;
-			padding-left:5px;
-			@include mq{
+			padding-left: 5px;
+
+			@include mq {
 				@include font-size(25);
 			}
 		}
-		a{
-			color:inherit;
+
+		a {
+			color: inherit;
 		}
 	}
-	.txtBase{
+
+	.txtBase {
 		max-height: 75px;
 		overflow: hidden;
 	}

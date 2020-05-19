@@ -377,6 +377,7 @@
 
 		&:nth-child(n+3) {
 			width: 25%;
+
 			.img {
 				&:before {
 					padding-bottom: calc(390/454*100%);
@@ -401,6 +402,10 @@
 	}
 
 	.img {
+		.img__crop {
+			pointer-events: none;
+		}
+
 		&:before {
 			padding-bottom: calc(390/583*100%);
 		}
@@ -432,6 +437,7 @@
 
 		a {
 			color: #333;
+			pointer-events: none;
 		}
 	}
 
